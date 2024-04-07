@@ -26,11 +26,17 @@ class CatBreedAdapter(private var catBreeds: List<CatBreed>) :
 
     class CatBreedViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val nameTextView: TextView = itemView.findViewById(R.id.nameTextView)
-        // Дополнительные переменные для других элементов UI...
+        private val weightTextView: TextView = itemView.findViewById(R.id.weightTextView)
+        private val lifeExpectancyTextView: TextView = itemView.findViewById(R.id.lifeExpectancyTextView)
+        private val playfulnessTextView: TextView = itemView.findViewById(R.id.playfulnessTextView)
+        private val childrenFriendlyTextView: TextView = itemView.findViewById(R.id.childrenFriendlyTextView)
 
     fun bind(catBreed: CatBreed) {
         nameTextView.text = catBreed.name
-        // Привязка дополнительных полей catBreed к элементам UI...
+        weightTextView.text = "Вес: ${catBreed.minWeight} - ${catBreed.maxWeight}"
+        lifeExpectancyTextView.text = "Продолжительность жизни: ${catBreed.minLifeExpectancy} - ${catBreed.maxLifeExpectancy}"
+        playfulnessTextView.text = itemView.context.getString(R.string.playfulness_format, catBreed.playfulness)
+        childrenFriendlyTextView.text = itemView.context.getString(R.string.children_friendly_format, catBreed.childrenFriendly)
     }
 }
     fun updateData(newCatBreeds: List<CatBreed>) {

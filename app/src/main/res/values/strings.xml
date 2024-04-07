@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Cats_app</string>
-    <string name="search_title" />
+    <string name="search">Search</string>
+    <string name="min_life_expectancy_hint">Мин. продолжительность жизни</string>
+    <string name="weight_format">Вес: %1$s - %2$s</string>
+    <string name="life_expectancy_format">Продолжительность жизни: %1$s - %2$s</string>
+    <string name="playfulness_format">Playfulness: %1$d</string>
+    <string name="children_friendly_format">Children Friendly: %1$d</string>
 </resources>
